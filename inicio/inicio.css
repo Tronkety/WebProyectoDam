@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* El body como columna flex */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* El main se estira para ocupar el espacio */
+main {
+  flex: 1;
+}
+
+.subpagact {
+     /* Linea debajo para la página activa */
+    font-weight: 800;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+
+body {
+  margin: 0;
+}
+
+.logonombreweb {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre el logo y el nombre */
+}
+
+.logoheader {
+  height: 44px;
+  border-radius: 5px;   /* esquinas suavemente redondeadas */
+}
+
+header { /*Estilo del header*/
+    background-color: #1a1a1a;
+    color: white;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    font-family: 'Google Sans Flex', sans-serif;
+    font-weight: 500;
+    position: relative;
+}
+
+header nav a { /*Normal*/
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    vertical-align: middle;
+    transition: font-weight 0.3s ease;
+}
+
+header nav a:hover { /*Efecto al pasar el ratón por encima*/
+    vertical-align: middle;
+        font-weight: 800;
+}
+
+@media (max-width: 600px) {
+
+
+
+  .logotexto {
+    font-size: 15px; 
+  }
+
+  .hamburger {
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* Las 3 líneas */
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;   /* blanco */
+  border-radius: 3px;
+}
+
+.hamburger span {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  /* Estado X cuando el botón tenga la clase .activo */
+  .hamburger.activo span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.activo span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.activo span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+header nav {
+  position: absolute;
+  top: 100%;          /* justo debajo del header */
+  left: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+  /* Menú visible cuando el header tenga la clase .menu-abierto */
+  header.menu-abierto nav {
+    display: flex;
+  }
+
+  header.menu-abierto nav a {
+    display: block;
+      margin: 10px 0;
+  }
+
+}
+
+@media (min-width: 601px) {
+
+.hamburger {
+    display: none; 
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    display: flex; 
+  }
+
+  .menumovil {
+    display: none; 
+  }
+}
+
+main h1 {
+  text-align: center;   
+  font-family: 'Google Sans Flex', sans-serif;
+  font-weight: 700;
+  margin-top: 20px;    
+}
+
+main p {
+  max-width: 700px;   
+  margin: 0 auto;        
+  padding: 0 16px;       
+  text-align: justify;   
+  font-family: 'Google Sans Flex', sans-serif;
+  font-weight: 500;
+}
+
+.subtexto {  
+  margin-top: 10px;     
+  text-align: center;   
+}
+
+
+/* ===== SLIDER HORIZONTAL ===== */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 30px auto;
+  padding: 0 10px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.slider-window {
+  overflow-x: hidden;
+  overflow-y: visible;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px 0;
+  margin: -20px 0;
+}
+
+.slider-track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.5s ease-in-out;
+  cursor: grab;
+  user-select: none;
+  padding: 0;
+}
+
+.slider-track.no-transition {
+  transition: none;
+}
+
+/* Cards dentro del slider */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  flex: 0 0 auto;
+  min-width: 0;
+  width: 100%;
+  max-width: 350px;
+}
+
+.card {
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Google Sans Flex', sans-serif;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card h2 {
+  font-size: 18px;
+  margin: 16px 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Flechas */
+.arrow {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.arrow:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+.arrow:active {
+  transform: scale(0.95);
+}
+
+/* ===== RESPONSIVE SLIDER ===== */
+
+/* Móvil pequeño: 1 card */
+@media (max-width: 480px) {
+  .slider-container {
+    gap: 5px;
+    padding: 0 5px;
+    margin: 20px auto;
+  }
+  
+  .slider-window {
+    padding: 15px 5px;
+    margin: -15px 0;
+  }
+  
+  .slider-track {
+    gap: 12px;
+    padding: 0 5px;
+  }
+  
+  .card-link {
+    width: calc(100vw - 30px);
+    max-width: 100%;
+  }
+  
+  .card img {
+    height: 180px;
+  }
+  
+  .card h2 {
+    font-size: 16px;
+    margin: 12px 10px;
+  }
+  
+  .arrow {
+    display: none !important;
+  }
+}
+
+/* Móvil grande: 1 card */
+@media (min-width: 481px) and (max-width: 599px) {
+  .slider-container {
+    gap: 8px;
+    padding: 0 8px;
+  }
+  
+  .slider-track {
+    gap: 14px;
+    padding: 0 8px;
+  }
+  
+  .card-link {
+    width: calc(100vw - 50px);
+    max-width: 450px;
+  }
+  
+  .card img {
+    height: 200px;
+  }
+  
+  .arrow {
+    display: none !important;
+  }
+}
+
+/* Tablet pequeña: 2 cards */
+@media (min-width: 600px) and (max-width: 767px) {
+  .slider-container {
+    gap: 10px;
+  }
+  
+  .card-link {
+    width: calc(50vw - 40px);
+    max-width: 300px;
+  }
+  
+  .card img {
+    height: 180px;
+  }
+  
+  .arrow {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+/* Tablet grande: 2 cards */
+@media (min-width: 768px) and (max-width: 899px) {
+  .slider-container {
+    gap: 12px;
+  }
+  
+  .card-link {
+    width: calc(50vw - 50px);
+    max-width: 350px;
+  }
+  
+  .card img {
+    height: 200px;
+  }
+  
+  .arrow {
+    display: flex;
+  }
+}
+
+/* Desktop pequeño: 3 cards */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .slider-container {
+    gap: 12px;
+  }
+  
+  .card-link {
+    width: calc(33.333% - 20px);
+    max-width: 320px;
+  }
+  
+  .card img {
+    height: 200px;
+  }
+  
+  .arrow {
+    display: flex;
+  }
+}
+
+/* Desktop grande: 3 cards */
+@media (min-width: 1200px) {
+  .slider-container {
+    gap: 15px;
+    padding: 0 20px;
+  }
+  
+  .card-link {
+    width: calc(33.333% - 25px);
+    max-width: 380px;
+  }
+  
+  .card img {
+    height: 220px;
+  }
+  
+  .card h2 {
+    font-size: 19px;
+  }
+  
+  .arrow {
+    display: flex;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Pantallas extra grandes: 3 cards con max-width */
+@media (min-width: 1400px) {
+  .slider-window {
+    max-width: 1300px;
+  }
+  
+  .card-link {
+    max-width: 400px;
+  }
+  
+  .card img {
+    height: 240px;
+  }
+}
+
+
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: 'Google Sans Flex', sans-serif;
+  padding: 40px 20px 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #444;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #bbb;
+  margin: 0;
+}
+
+.footer-section a {
+  display: block;
+  color: #bbb;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+/* Redes sociales */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 50%;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 0;
+}
+
+.social-links a:hover {
+  background-color: #555;
+  transform: translateY(-3px);
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Copyright */
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 13px;
+  color: #888;
+  background-color: #111;
+}
+
+.footer-bottom p {
+  margin: 0;
+  padding: 0 10px;
+}
+
+/* ===== RESPONSIVE FOOTER ===== */
+
+/* Tablet: 2 columnas */
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .footer-section:first-child {
+    grid-column: 1 / -1; /* Primera sección ocupa todo el ancho */
+  }
+}
+
+/* Móvil: 1 columna como el header */
+@media (max-width: 600px) {
+  footer {
+    padding: 30px 15px 0;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
+  }
+  
+  .footer-section:first-child {
+    grid-column: auto;
+  }
+  
+  .footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .footer-section p {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+  
+  .footer-section a {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  
+  .social-links {
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .social-links a {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .footer-bottom {
+    padding: 12px 0;
+    font-size: 11px;
+  }
+  
+  .footer-bottom p {
+    line-height: 1.4;
+  }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 400px) {
+  .footer-section h3 {
+    font-size: 15px;
+  }
+  
+  .footer-section p {
+    font-size: 12px;
+  }
+  
+  .footer-section a {
+    font-size: 12px;
+  }
+  
+  .social-links a {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-links svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
