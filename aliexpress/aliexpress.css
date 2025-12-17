@@ -212,7 +212,7 @@ main p {
 
 .producto-card img {
   width: 100%;
-  height: 220px;
+  height: 320px;
   object-fit: cover;
   display: block;
 }
@@ -254,7 +254,7 @@ main p {
   }
   
   .producto-card img {
-    height: 200px;
+    height: 300px;
   }
   
   .producto-card h3 {
@@ -283,7 +283,7 @@ main p {
   }
   
   .producto-card img {
-    height: 180px;
+    height: 300px;
   }
   
   .producto-info {
