@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>Mi primera web</title>
-  <link rel="stylesheet" href="aliexpress.css">
+  <link rel="stylesheet" href="lacuponera.css">
 </head>
 
 <body>
   <header>
     <div class="logonombreweb">
-      <!--<img class="logoheader" src="" alt="">-->
+      <!--<img class="logoheader" src="" alt=""> posible logo a insertar-->
       <h1 class="logotexto">Tronkety.com</h1>
     </div>
 
     <nav class="menu"> <!-- Pc o Tablet -->
-      <a href="..\inicio\inicio.html">Inicio</a>
-      <a href="..\aliexpress\aliexpress.html" class="subpagact">Aliexpress</a>
-      <a href="..\viajes\viajes.html">Viajes</a>
-      <a href="..\apps de ahorro\apps de ahorro.html">Apps De Ahorro</a>
+      <a href="..\..\inicio\inicio.html">Inicio</a>
+      <a href="..\..\aliexpress\aliexpress.html">Aliexpress</a>
+      <a href="#servicios">Viajes</a>
+      <a href="..\..\apps de ahorro\apps de ahorro.html">Apps De Ahorro</a>
       <a href="#contacto">¿Quien soy?</a>
     </nav>
 
@@ -33,49 +33,70 @@
 
 
   <main>
-    <h1>¡Importante!</h1>
-    <p class="subtexto">Ten en cuenta que las ofertas se van subiendo de vezen cuando, las mas nuevas quedaran arriba
-      pero las antiguas no tienen porque seguir funcionando.</p>
+    <div class="logo-container">
+      <img src="Logovectorizado_lacuponera_v2__1_.png" alt="Letyshops" class="logo-letyshops">
+      <a href="https://www.lacuponera.es/" target="_blank" rel="noopener" class="btn-web">Ir a la
+        web</a>
+    </div>
+    <section class="letyshops-top">
+      <article class="letyshops-card">
+        <h2>¿Qué es La Cuponera?</h2>
+        <p>
+          La Cuponera es una aplicación gratuita para móvil que reúne ofertas, cupones y
+          promociones de distintas marcas de alimentación, higiene y hogar. En lugar de darte
+          un descuento directo en caja, te devuelve después un porcentaje (o, a veces, el 100%)
+          del precio del producto en forma de cashback. Ese dinero se acumula en tu
+          monedero dentro de la app hasta que alcanzas un mínimo para retirarlo a tu cuenta
+          bancaria.
+        </p>
+      </article>
 
+      <!-- Derecha: ¿Para qué sirve / ventajas? -->
+      <article class="letyshops-card letyshops-steps">
+        <h2>¿Para qué sirve?</h2>
+        <ul>
+          <p>
+            Su objetivo es ayudarte a ahorrar en tus compras habituales sin cambiar de
+            supermercado ni de productos. Sirve para descubrir ofertas activas, aprovechar
+            promociones especiales (por ejemplo, “pruébalo casi gratis” o “reembolso total”)
+            y recuperar dinero de tickets que, de otro modo, no te devolverían nada. Al
+            final, cuanto más uses la app y más ofertas actives, más cashback acumulas en
+            tu saldo.
+          </p>
 
-    <!-- SECCIÓN DE PRODUCTOS -->
-    <section class="productos-section">
-      <h2>Productos de Aliexpress</h2>
+        </ul>
+      </article>
+    </section>
 
-      <div class="productos-grid">
+    <section class="letyshops-video-section">
+      <div class="letyshops-video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/ucTS9wRRcgM?si=z13DyqKBTrhIOU1E" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
 
-        <a href="https://a.aliexpress.com/_Euphc9m" target="_blank" class="producto-card">
-          <img src="..\aliexpress\productos\17-12-25\17-12-2025---( 1 )\mem-ram-king.avif" alt="Auriculares Bluetooth">
-          <div class="producto-info">
-            <h3>Kingston fury beast 16gb kit (2x8gb) ddr4-3200</h3>
-            <p class="producto-precio">53€</p>
-            <p class="producto-fecha">17/12/2025 - 13:28</p>
-          </div>
-        </a>
-
-        <a href="https://s.click.aliexpress.com/e/_EyUXdC0" target="_blank" class="producto-card">
-          <img src="..\aliexpress\productos\17-12-25\17-12-2025---( 2 )\cooler.avif" alt="Smartwatch Deportivo">
-          <div class="producto-info">
-            <h3>TEUCER UT45 Series CPU Cooler 45mm ITX</h3>
-            <p class="producto-precio">21.20€</p>
-            <p class="producto-fecha">17/12/2025 - 13:35</p>
-          </div>
-        </a>
-
-        <a href="https://a.aliexpress.com/_EQqMRTI" target="_blank" class="producto-card">
-          <img src="..\aliexpress\productos\17-12-25\17-12-2025---( 3 )\mem-ram-king.avif" alt="Cargador Inalámbrico">
-          <div class="producto-info">
-            <h3>Kingston fury beast 32gb kit (2x16gb) ddr4-3200</h3>
-            <p class="producto-precio">86.85€</p>
-            <p class="producto-fecha">17/12/2025 - 14:00</p>
-          </div>
-        </a>
-
+      <div class="letyshops-video-text">
+        <h2>Así funciona La Cuponera paso a paso</h2>
+        <p>
+          1. Te registras gratis, entras en la app y eliges las ofertas o cupones de los productos que te interesan
+          antes de ir a comprar.
+        </p>
+        <p>
+          2. Compras esos productos normalmente en tu supermercado o tienda física favorita, guardando el ticket.
+        </p>
+        <p>
+          3. Abres la app, haces una foto clara del ticket y la envías para que se verifique la compra.
+        </p>
+        <p>
+          4. Cuando la app valida el ticket, ingresa el importe del cashback en tu monedero virtual, y al llegar al
+          mínimo (por ejemplo, 10 €) puedes transferirlo a tu cuenta bancaria.
+        </p>
       </div>
     </section>
   </main>
-
-
 
 
   <footer>
@@ -132,7 +153,8 @@
           </a>
 
           <!-- LinkedIn -->
-          <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <a href="https://www.linkedin.com/in/héctor-ruiz-santana-934976301" aria-label="LinkedIn" target="_blank"
+            rel="noopener">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -158,6 +180,7 @@
       header.classList.toggle('menu-abierto');  // muestra/oculta el menú
     });
   </script>
+
 
 </body>
 

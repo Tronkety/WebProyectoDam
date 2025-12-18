@@ -159,233 +159,195 @@ main p {
   text-align: center;
 }
 
-.slider-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6.4px;
-  margin: 24px auto;
-  padding: 0 8.0px;
-  max-width: 80%;
-}
-
-.slider-window {
-  overflow-x: hidden;
-  overflow-y: visible;
-  width: 80%;
+.letyshops-top {
   max-width: 960px;
-  padding: 16px 0;
-  margin: -16px 0;
+  margin: 0 auto 32px;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 19px;
 }
 
-.slider-track {
-  display: flex;
-  gap: 13px;
-  transition: transform 0.5s ease-in-out;
-  cursor: grab;
-  user-select: none;
-}
-
-.slider-track.no-transition {
-  transition: none;
-}
-
-.card-link {
-  text-decoration: none;
-  color: inherit;
-  flex: 0 0 auto;
-  width: 80%;
-  max-width: 280px;
-}
-
-.card {
+.letyshops-card {
   background-color: #222;
-  border-radius: 6.4px;
-  overflow: hidden;
   color: #fff;
+  border-radius: 9.6px;
+  padding: 16px 18px;
   font-family: 'Google Sans Flex', sans-serif;
-  height: 80%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 1.6px 6.4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 1.6px 6.4px rgba(0, 0, 0, 0.3);
 }
 
-.card:hover {
-  transform: translateY(-4.8px);
-  box-shadow: 0 9.6px 19px rgba(0, 0, 0, 0.4);
+.letyshops-card:hover {
+  transform: translateY(-3.2px);
+  box-shadow: 0 6.4px 16px rgba(0, 0, 0, 0.5);
 }
 
-.card img {
+.letyshops-card h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 9.6px;
+}
+
+.letyshops-card p {
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 0 0 8.0px 0;
+}
+
+.letyshops-steps ul {
+  padding-left: 14px;
+  margin: 0;
+}
+
+.letyshops-steps li {
+  font-size: 11px;
+  line-height: 1.6;
+  margin-bottom: 4.8px;
+}
+
+.letyshops-video-section {
+  max-width: 960px;
+  margin: 0 auto 48px;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 4fr);
+  gap: 19px;
+  align-items: flex-start;
+}
+
+.video-container {
+  position: relative;
   width: 100%;
-  height: 160px;
-  object-fit: contain;
-  display: block;
-  background-color: #1a1a1a;
+  padding-top: 56.25%;
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.card h2 {
-  font-size: 14px;
-  margin: 13px 9.6px;
-  text-align: center;
-  font-weight: 600;
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.arrow {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 40%;
-  width: 36px;
-  height: 36px;
-  font-size: 19px;
-  cursor: pointer;
-  display: none;
+.letyshops-video-text {
+  font-family: 'Google Sans Flex', sans-serif;
+  color: #e0e0e0;
+  background-color: #1e1e1e;
+  border-radius: 9.6px;
+  padding: 16px 18px;
+}
+
+.letyshops-video-text h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 9.6px;
+}
+
+.letyshops-video-text p {
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 0 0 8.0px 0;
+}
+
+@media (max-width: 720px) {
+  .letyshops-top {
+    grid-template-columns: 1fr;
+  }
+
+  .letyshops-video-section {
+    grid-template-columns: 1fr;
+  }
+
+  .letyshops-video-text {
+    margin-top: 8.0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-letyshops {
+    width: 152px;
+    margin: 24px auto 19px;
+  }
+
+  .letyshops-top,
+  .letyshops-video-section {
+    padding: 0 11px;
+  }
+
+  .letyshops-card,
+  .letyshops-video-text {
+    padding: 13px;
+  }
+
+  .letyshops-card h2,
+  .letyshops-video-text h2 {
+    font-size: 14px;
+  }
+
+  .letyshops-card p,
+  .letyshops-steps li,
+  .letyshops-video-text p {
+    font-size: 10px;
+  }
+}
+
+.logo-container {
+  display: flex;
   align-items: center;
   justify-content: center;
+  gap: 16px;
+  margin: 32px auto 24px;
+  flex-wrap: wrap;
+}
+
+.logo-letyshops {
+  width: 184px;
+  height: auto;
+}
+
+.btn-web {
+  display: inline-block;
+  background-color: #1976D2;
+  color: #fff;
+  padding: 8.0px 13px;
+  border-radius: 6.4px;
+  font-family: 'Google Sans Flex', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+  text-align: center;
 }
 
-.arrow:hover {
-  background-color: #555;
-  transform: scale(1.1);
+.btn-web:hover {
+  background-color: #FCD31B;
+  transform: scale(1.05);
 }
 
-.arrow:active {
-  transform: scale(0.95);
+.btn-web:active {
+  transform: scale(0.98);
 }
 
-@media (max-width: 384px) {
-  .slider-container {
-    gap: 4.0px;
-    padding: 0 4.0px;
-    margin: 16px auto;
-  }
-
-  .slider-window {
-    padding: 12px 4.0px;
-    margin: -12px 0;
-  }
-
-  .slider-track {
+@media (max-width: 480px) {
+  .logo-container {
+    flex-direction: column;
     gap: 9.6px;
-    padding: 0 4.0px;
+    margin: 24px auto 19px;
   }
 
-  .card-link {
-    width: calc(80vw - 24px);
-    max-width: 80%;
+  .logo-letyshops {
+    width: 152px;
   }
 
-  .card img {
-    height: 144px;
-  }
-
-  .card h2 {
-    font-size: 13px;
-    margin: 9.6px 8.0px;
-  }
-
-  .arrow {
-    display: none !important;
-  }
-}
-
-@media (min-width: 385px) and (max-width: 479px) {
-  .slider-track {
-    gap: 11px;
-    padding: 0 6.4px;
-  }
-
-  .card-link {
-    width: calc(80vw - 40px);
-    max-width: 360px;
-  }
-
-  .card img {
-    height: 160px;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 614px) {
-  .card-link {
-    width: calc(40vw - 32px);
-    max-width: 240px;
-  }
-
-  .card img {
-    height: 144px;
-  }
-
-  .arrow {
-    display: flex;
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 614px) and (max-width: 719px) {
-  .card-link {
-    width: calc(40vw - 40px);
-    max-width: 280px;
-  }
-
-  .card img {
-    height: 160px;
-  }
-
-  .arrow {
-    display: flex;
-  }
-}
-
-@media (min-width: 720px) and (max-width: 959px) {
-  .card-link {
-    width: calc(27% - 16px);
-    max-width: 256px;
-  }
-
-  .arrow {
-    display: flex;
-  }
-}
-
-@media (min-width: 960px) {
-  .slider-container {
-    gap: 12px;
-    padding: 0 16px;
-  }
-
-  .card-link {
-    width: calc(27% - 20px);
-    max-width: 304px;
-  }
-
-  .card img {
-    height: 176px;
-  }
-
-  .card h2 {
-    font-size: 15px;
-  }
-
-  .arrow {
-    display: flex;
-    width: 40px;
-    height: 40px;
-  }
-}
-
-@media (min-width: 1120px) {
-  .slider-window {
-    max-width: 1040px;
-  }
-
-  .card-link {
-    max-width: 320px;
-  }
-
-  .card img {
-    height: 192px;
+  .btn-web {
+    padding: 6.4px 11px;
+    font-size: 10px;
   }
 }
 
